@@ -71,7 +71,7 @@ h6 {
 /* add your CSS here */
 :root {
   --color-font: #333;
-  --color-primary: #205373; /* dark blue */
+  --color-primary: white; /* dark blue */
   --color-secondary: #517ea6; /* light blue */
   --color-accent: #a6653f; /* orange brown */
   --color-accent-light: #f2bc8d; /* light tan */
@@ -139,3 +139,50 @@ a[href]:hover {
   font-size: 1.5em;
   margin: 0;
 }
+
+.hero h1 {
+  font-size: clamp(3.5rem, 10vw + 1rem, 10rem);
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cards {
+  display: flex;
+  ...;
+}
+
+.card {
+  flex: 1 1 0;
+  ...;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+  ...;
+}
+
+.card {
+  ...
+  transition: box-shadow 300ms ease;
+
+  
