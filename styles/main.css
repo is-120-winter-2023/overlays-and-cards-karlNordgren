@@ -106,7 +106,11 @@ a[href]:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
+  );
   opacity: 0.8;
 }
 
@@ -140,45 +144,42 @@ a[href]:hover {
   font-size: clamp(3.5rem, 10vw + 1rem, 10rem);
 }
 
-.sr-only {
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 5px;
   overflow: hidden;
-  padding: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.card:hover .overlay {
+  opacity: 1;
 }
 
-.cards {
-  display: flex;
-  ...;
+.overlay h2 {
+  margin: 20px;
 }
 
-.card {
-  flex: 1 1 0;
-  ...;
+.overlay p {
+  margin: 0 20px 20px;
 }
-
-.card {
-  display: flex;
-  gap: 1rem;
-  ...;
-}
-
-.card {
-  ...
-  transition: box-shadow 300ms ease;
-}
-  
